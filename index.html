@@ -1,32 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Mi blog personal</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ginkgo Biloba - Alojamiento</title>
+
+    <!-- Tipografía Forum -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <h1>✨ Bienvenidos a mi blog personal 💻</h1>
-    <h2>¡Hola! Soy <strong>Ana Paula</strong> 😊</h2>
-    <h3>Acompañame a presentarme mientras aprendemos HTML📚</h3>
 
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html">
+                <img src="media/hoja_ginkgo.webp" alt="Hoja de Ginkgo" class="logo-img">
+                <h1 class="titulo">Ginkgo Biloba</h1>
+            </a>
 
-    <img src="media/yo.jpg" width="220" alt="foto_mia">
+            <ul class="nav-links">
+                <li><a class="active" href="index.html">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="anuncio.html">Nuestro anuncio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <p>Actualmente estudio en la <strong>UNLu</strong> y estoy en mi tercer año 
-        de la carrera <strong>Licenciatura en Sistemas de Información</strong>.</p>
+    <main class="container">
+        <h1 class="page-title">Bienvenidos a Ginkgo Biloba, tu alojamiento de confianza</h1>
+        <p class="page-subtitle">Elegí tu espacio ideal y conocé más sobre nuestra propuesta en Luján.</p>
 
-    <p> Me apasiona la <strong>tecnología</strong> 🌐, 
-        el <strong>aprendizaje constante</strong> y los <strong>deportes</strong> 🏋️‍♀️.</p>
+        <section class="cards">
+            <article class="card">
+                <img src="media/comedor.jpeg" alt="Comedor">
+                <h2>Comedor</h2>
+            </article>
 
-    <h3>👉 Te comparto un poco de lo que me gusta:</h3>
-    <p>
-        <a href="https://www.youtube.com/watch?v=axUOMKsTQsg&t=152s" target="_blank">
-            Mi deporte favorito 🏊‍♀️</a>
-    </p>
-    <hr>
-    <h4>¡Gracias por visitar mi primera página web! 🌟</h4>
+            <article class="card">
+                <img src="media/habitacion.jpeg" alt="Habitacion">
+                <h2>Habitacion</h2>
+            </article>
+
+            <article class="card">
+                <img src="media/sala.jpeg" alt="Sala">
+                <h2>Sala de estar</h2>
+            </article>
+        </section>
+        <section class="testimonials">
+            <div class="container">
+
+                <div class="section-head">
+                    <span class="accent-bar"></span>
+                    <div>
+                        <h2 class="section-title">Experiencias</h2>
+                        <p class="section-subtitle">Lo que dicen quienes se alojaron en Ginkgo Biloba</p>
+                    </div>
+                </div>
+
+                <div class="testimonials-grid">
+
+                    <article class="t-card">
+                        <p class="quote">
+                            “Un lugar cálido, cómodo y muy bien ubicado. Nos sentimos como en casa
+                            desde el primer momento.”
+                        </p>
+                        <div class="t-footer">
+                            <span class="line"></span>
+                            <div>
+                                <h3 class="name">María G.</h3>
+                                <p class="role">Estadía de fin de semana</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="t-card">
+                        <p class="quote">
+                            “La atención y los detalles marcan la diferencia. Ideal para descansar
+                            y recorrer Luján.”
+                        </p>
+                        <div class="t-footer">
+                            <span class="line"></span>
+                            <div>
+                                <h3 class="name">Lucas R.</h3>
+                                <p class="role">Viaje en pareja</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="t-card">
+                        <p class="quote">
+                            “Espacios amplios, limpios y bien equipados. Sin dudas volveríamos.”
+                        </p>
+                        <div class="t-footer">
+                            <span class="line"></span>
+                            <div>
+                                <h3 class="name">Carolina M.</h3>
+                                <p class="role">Estadía familiar</p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© Ginkgo Biloba - Luján</p>
+    </footer>
 
 </body>
+
 </html>

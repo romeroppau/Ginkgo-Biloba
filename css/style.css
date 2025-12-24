@@ -1,0 +1,382 @@
+/* Parámetros iniciales */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { width: 100%; height: 100%; }
+
+/*animacion de todas las secciones para que aparezcan TODOS los elementos lentamente*/
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.section {
+  animation: aparecer 1.5s ease;
+}
+
+:root{
+  line-height: 1.5;
+  font-weight: 400;
+  color: #2f4025;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tipografía local opcional */
+@font-face {
+  font-family: "TAN Pearl";
+  src: url("../assets/fonts/tan-pearl.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  background-color: #D3B29C;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Forum", serif;
+  color: #2f4025;
+}
+
+/* Layout */
+.container{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 26px 16px 40px;
+  text-align: center;
+  animation: aparecer 1.5s ease; /*aparicion lenta en "inicio" tambien*/
+}
+
+.page-title{
+  margin: 22px 0 16px;
+  font-size: 28px;
+}
+
+.page-subtitle{
+  margin-bottom: 22px;
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* Header / navbar */
+header{
+  width: 100%;
+  background-color: #a36c44;
+  padding: 18px 16px;
+}
+
+.navbar{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #2f4025;
+}
+
+.logo-img{
+  width: 32px;
+  height: auto;
+}
+
+.titulo{
+  font-family: "TAN Pearl", "Forum", serif;
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a{
+  text-decoration: none;
+  font-family: "Forum", serif;
+  font-size: 1.15rem;
+  color: #2f4025;
+  letter-spacing: 3px;
+  padding: 6px 6px;
+}
+
+.nav-links a:hover{
+  text-decoration: underline;
+}
+
+.nav-links a.active{
+  text-decoration: underline;
+}
+
+/* Home / Cards */
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.card{
+  background: #b57b50;
+  border-radius: 18px;
+  padding: 18px;
+}
+
+/* EFECTO para que aparezca lentamente
+.card{
+    transition: all 0.5s ease;
+}*/
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card img{
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #eee;
+}
+
+.card h2{
+  margin: 16px 0 6px;
+  font-family: "TAN Pearl", "Forum", serif;
+  font-size: 34px;
+}
+
+/* Secciones*/
+.section{
+  background: rgba(181, 123, 80, 0.25);
+  border: 1px solid rgba(47, 64, 37, 0.15);
+  border-radius: 18px;
+  padding: 18px;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section h2{
+  font-family: "TAN Pearl", "Forum", serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.section p{
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.kv{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 18px;
+  margin-top: 14px;
+}
+
+.kv div{
+  background: rgba(163, 108, 68, 0.25);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.kv strong{
+  display: block;
+  margin-bottom: 4px;
+}
+
+.list{
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+.list li{
+  margin: 7px 0;
+}
+
+.btn-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.btn{
+  display: inline-block;
+  background: #a36c44;
+  color: #2f4025;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  letter-spacing: 1px;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+
+.btn:hover {
+  background-color: #643b1e;
+}
+
+/* Footer */
+footer{
+  text-align: center;
+  padding: 18px 16px;
+  background: #a36c44;
+  color: #2f4025;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .navbar{ flex-direction: column; align-items: flex-start; gap: 12px; }
+  .nav-links{ flex-wrap: wrap; gap: 14px; }
+
+  .cards{ grid-template-columns: 1fr; }
+  .card img{ height: 300px; }
+
+  .titulo{ font-size: 28px; }
+  .page-title{ font-size: 22px; }
+
+  .kv{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 420px){
+  .nav-links a{ letter-spacing: 1.5px; }
+}
+
+/*seccion reseñas*/
+/* Testimonios */
+.testimonials {
+  background: #f5efe9; /* más claro que el fondo general */
+  padding: 70px 0;
+  margin-top: 40px;
+}
+
+.section-head {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.accent-bar {
+  width: 8px;
+  height: 70px;
+  background: #a36c44; /* color principal Ginkgo */
+  display: inline-block;
+}
+
+.section-title {
+  font-family: "TAN Pearl", "Forum", serif;
+  font-size: 54px;
+  margin: 0 0 8px;
+  color: #2f4025;
+}
+
+.section-subtitle {
+  margin: 0;
+  font-size: 18px;
+  color: #7a4a2a;
+}
+
+/* Grid */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+.t-card {
+  background: #ffffff;
+  border: 1px solid rgba(47, 64, 37, 0.15);
+  padding: 34px 30px;
+  border-radius: 18px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*Efecto de zoom*/
+.t-card:hover{
+  transition: transform 0.3s ease;
+  transform: scale(1.05);
+}
+
+/* Texto */
+.quote {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #3d3d3d;
+  font-family: "Forum", serif;
+}
+
+/* Footer */
+.t-footer {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-top: 22px;
+}
+
+.t-footer .line {
+  width: 60px;
+  height: 1px;
+  background: rgba(47, 64, 37, 0.3);
+  margin-top: 14px;
+}
+
+.name {
+  margin: 0;
+  font-size: 20px;
+  font-family: "Forum", serif;
+  color: #2f4025;
+}
+
+.role {
+  margin: 6px 0 0;
+  font-size: 15px;
+  color: #6b6b6b;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 38px;
+  }
+
+  .accent-bar {
+    height: 55px;
+  }
+}
+
